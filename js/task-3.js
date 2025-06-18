@@ -1,11 +1,17 @@
-function getElementWidth(content, padding, border) {
-    const numericalContent = parseFloat(content);
-    const numericalPadding = parseFloat(padding);
-    const numericalBorder =  parseFloat(border);
-    const boxSizing =  numericalContent+2 * (numericalBorder + numericalPadding);
-    return boxSizing;
-}
+// Функція повинна повертати новий масив лише тих чисел із масиву numbers, які більші за значення value.
 
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
+
+function filterArray(number, value) {
+    let newmassive=[];
+    for (const newnumber of number) {
+        if (newnumber > value) {
+            newmassive.push(newnumber);
+        }
+    }
+    return newmassive;
+}
+console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
+console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
+console.log(filterArray([1, 2, 3, 4, 5], 5)); // []
+console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
+console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
