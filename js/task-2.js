@@ -5,9 +5,9 @@
 //  В іншому випадку функція повинна повернути весь новий масив.
 
 
-function makeArray(firstArray, secondArray, maxLenght) {
+function makeArray(firstArray, secondArray, maxLength) {
     const supermassive = firstArray.concat(secondArray);
-    return supermassive.slice(0, maxLenght);
+    return supermassive.slice(0, maxLength);
 }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
